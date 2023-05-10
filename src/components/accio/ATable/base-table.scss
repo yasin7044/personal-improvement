@@ -1,0 +1,61 @@
+$row-height: 44px;
+
+.base-table {
+  &.q-table__card {
+    border-radius: (2 * $generic-border-radius) !important;
+  }
+
+  :deep(tr) {
+    height: $row-height;
+  }
+
+  :deep(.q-table__bottom) {
+    min-height: $row-height;
+    // border: none;
+  }
+
+  :deep(thead) {
+    background-color: map-get($primary-colors, 5);
+  }
+
+  :deep(th) {
+    padding: 0px 15px;
+    font-size: map-get($body2-bold, "size");
+    line-height: map-get($body2-bold, "line-height");
+    letter-spacing: map-get($body2-bold, "letter-spacing");
+    font-weight: map-get($body2-bold, "weight");
+    color: map-get($primary-colors, 80);
+  }
+
+  :deep(td) {
+    padding: 0px 15px;
+    font-size: map-get($body2, "size");
+    line-height: map-get($body2, "line-height");
+    letter-spacing: map-get($body2, "letter-spacing");
+    font-weight: map-get($body2, "weight");
+  }
+
+  :deep(td)::after {
+    background: rgb($primary, 0.03);
+  }
+
+  :deep(td)::before {
+    background: rgb($primary, 0.03);
+  }
+
+  :deep(tbody tr):hover {
+    background-color: transparent;
+    box-shadow: inset 5px 0px 0px 0px $primary;
+  }
+
+  :deep(.selected) {
+    background-color: transparent;
+    box-shadow: inset 5px 0px 0px 0px $primary;
+  }
+
+  :deep(.q-checkbox__inner--falsy) {
+    .q-checkbox__bg {
+      border-color: map-get($primary-colors, 30);
+    }
+  }
+}
